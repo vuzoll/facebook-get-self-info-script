@@ -1,8 +1,20 @@
-apply plugin: 'groovy'
 apply plugin: 'idea'
+
+apply plugin: 'groovy'
+
+apply plugin: 'application'
+
+version = '0.2'
 
 repositories {
     jcenter()
+}
+
+mainClassName = "org.github.vuzoll.facebook.getselfinfo.Script"
+run {
+    if (System.getProperty('accessToken')) {
+        args System.getProperty('accessToken').split()
+    }
 }
 
 dependencies {
