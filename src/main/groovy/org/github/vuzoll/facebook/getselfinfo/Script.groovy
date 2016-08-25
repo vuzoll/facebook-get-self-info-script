@@ -1,6 +1,8 @@
+package org.github.vuzoll.facebook.getselfinfo
+
 import groovyx.net.http.RESTClient
 
-def accessToken
+def accessToken = args[0]
 
 def facebook = new RESTClient('https://graph.facebook.com/')
 
