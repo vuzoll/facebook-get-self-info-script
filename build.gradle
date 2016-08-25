@@ -10,7 +10,9 @@ repositories {
 
 mainClassName = "org.github.vuzoll.facebook.getselfinfo.Script"
 run {
-    args System.getProperty('accessToken').split()
+    if (System.getProperty('accessToken')) {
+        args System.getProperty('accessToken').split()
+    }
 }
 
 dependencies {
